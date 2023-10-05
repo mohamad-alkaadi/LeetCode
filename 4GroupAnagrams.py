@@ -13,11 +13,13 @@ for i in strs:
         continue
     if x in strs:
         new_strs.append([i,x])
+        used_strs.append(i)
+        used_strs.append(x)
     if x not in strs:
         new_strs.append(i)
-    new_strs.append(b)
+        used_strs.append(i)
 
     print("---------")
 
-# print(reversed_strs)
+print(used_strs)
 print(new_strs)
