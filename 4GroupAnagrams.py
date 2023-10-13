@@ -1,25 +1,10 @@
 strs = ["eat","tea","tan","ate","nat","bat"]
-new_strs = []
-b = []
-used_strs = []
 
+new_stars = []
 
 for i in strs:
-    z = len(i)
-    x = ""
-    for j in i:
-        x = j + x
-    if x in used_strs:
-        continue
-    if x in strs:
-        new_strs.append([i,x])
-        used_strs.append(i)
-        used_strs.append(x)
-    if x not in strs:
-        new_strs.append(i)
-        used_strs.append(i)
+    reversed_str = i[::-1]
+    if reversed_str in strs:
+        new_stars.append([i,reversed_str])
 
-    print("---------")
-
-print(used_strs)
-print(new_strs)
+print(new_stars)
