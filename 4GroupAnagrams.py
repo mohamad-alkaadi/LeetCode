@@ -1,10 +1,16 @@
-strs = ["eat","tea","tan","ate","nat","bat"]
+#learned solution
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        res = defaultdict(list)
 
-new_stars = []
+        for s in strs:
+            count = [0] * 26
+            for c in s:
+                count[ord(c) - ord("a")] +=1
+    
+            res[tuple(count)].append(s)
 
-for i in strs:
-    reversed_str = i[::-1]
-    if reversed_str in strs:
-        new_stars.append([i,reversed_str])
+        return res.values()
 
-print(new_stars)
+
+        
