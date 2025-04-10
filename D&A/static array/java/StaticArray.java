@@ -13,18 +13,19 @@ public class StaticArray{
     }
     // Remove from the last position in the array if the array
     // is not empty (i.e. length is non-zero).
-    public void removeEnd(int[] arr, int realValuesLength, int arrCapacity){
+    public int[] removeEnd(int[] arr, int realValuesLength, int arrCapacity){
         if(realValuesLength>0){
             arr[realValuesLength - 1] = 0;
             realValuesLength--;
         }else{
             System.out.println("Array is empty. Cannot remove from end.");
         }
+        return arr;
     }
 
     // Insert n into index i after shifting elements to the right.
     // Assuming i is a valid index and arr is not full.
-    public void insertAtIndex(int[] arr, int n, int i, int realValuesLength, int arrCapacity){
+    public int[] insertAtIndex(int[] arr, int n, int i, int realValuesLength, int arrCapacity){
         if(realValuesLength< arrCapacity && i < arrCapacity - 1){
             for (int x= realValuesLength; x>i ;x--){
                 arr[x] = arr[x - 1];
@@ -33,19 +34,21 @@ public class StaticArray{
         }else {
         System.out.println("Insertion not possible. Either the array is full or the index is invalid.");
     }
+    return arr;
     }
     // Remove value at index i before shifting elements to the left.
     // Assuming i is a valid index.
-    public void removeAtIndex(int[] arr, int i, int realValuesLength){
+    public int[] removeAtIndex(int[] arr, int i, int realValuesLength){
         if(i<realValuesLength && i>=0){
             for(int x = i; x<realValuesLength -1; x++){
                 arr[x] = arr[x+1];
             }
-            arr[realValuesLength - 1] = 0;
+            arr[realValuesLength-1] = 0;
             realValuesLength--;
         }else{
             System.out.println("Invalid index. Removal not performed.");
         }
+        return arr;
     }
 
 }
