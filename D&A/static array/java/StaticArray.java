@@ -13,10 +13,9 @@ public class StaticArray{
     }
     // Remove from the last position in the array if the array
     // is not empty (i.e. length is non-zero).
-    public int[] removeEnd(int[] arr, int realValuesLength, int arrCapacity){
-        if(realValuesLength>0){
-            arr[realValuesLength - 1] = 0;
-            realValuesLength--;
+    public int[] removeEnd(int[] arr, int length){
+        if(length>0){
+            arr[length - 1] = 0;
         }else{
             System.out.println("Array is empty. Cannot remove from end.");
         }
@@ -25,8 +24,8 @@ public class StaticArray{
 
     // Insert n into index i after shifting elements to the right.
     // Assuming i is a valid index and arr is not full.
-    public int[] insertAtIndex(int[] arr, int n, int i, int realValuesLength, int arrCapacity){
-        if(realValuesLength< arrCapacity && i < arrCapacity - 1){
+    public int[] insertAtMiddle(int[] arr, int n, int i, int realValuesLength, int arrCapacity){
+        if(realValuesLength< arrCapacity && i < realValuesLength){
             for (int x= realValuesLength; x>i ;x--){
                 arr[x] = arr[x - 1];
             }

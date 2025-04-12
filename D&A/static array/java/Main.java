@@ -17,8 +17,8 @@ public class Main{
         arrayTwo[2] = 3;
         arrayTwo[3] = 4;
 
-        arrayTwo = staticArray.removeEnd(arrayTwo, 4, 4);
-        // System.out.println(arrayTwo[3]);
+        arrayTwo = staticArray.removeEnd(arrayTwo, 4);
+        // System.out.println(arrayTwo[0]);
         // System.out.println(arrayTwo[1]);
         // System.out.println(arrayTwo[2]);
         // System.out.println(arrayTwo[3]);
@@ -30,11 +30,11 @@ public class Main{
         arrayThree[1] = 2;
         arrayThree[2] = 3;
 
-        arrayThree = staticArray.insertAtIndex(arrayThree, 9, 2, 3,4);
-        // System.out.println(arrayThree[0]);
-        // System.out.println(arrayThree[1]);
-        // System.out.println(arrayThree[2]);
-        // System.out.println(arrayThree[3]);
+        arrayThree = staticArray.insertAtMiddle(arrayThree, 9, 2, 3,4);
+        System.out.println(arrayThree[0]);
+        System.out.println(arrayThree[1]);
+        System.out.println(arrayThree[2]);
+        System.out.println(arrayThree[3]);
 
         // removeAtIndex method
         int[] arrayFour = new int[6];
@@ -47,11 +47,11 @@ public class Main{
         arrayFour[5] = 6;
 
         arrayFour = staticArray.removeAtIndex(arrayFour, 2, 6);
-        System.out.println(arrayFour[0]);
-        System.out.println(arrayFour[1]);
-        System.out.println(arrayFour[2]);
-        System.out.println(arrayFour[3]);
-        System.out.println(arrayFour[4]);
-        System.out.println(arrayFour[5]);
+        // System.out.println(arrayFour[0]);
+        // System.out.println(arrayFour[1]);
+        // System.out.println(arrayFour[2]);
+        // System.out.println(arrayFour[3]);
+        // System.out.println(arrayFour[4]);
+        // System.out.println(arrayFour[5]);
     }
 }
